@@ -1,57 +1,39 @@
-<!Doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>sample website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Methods Example</title>
+    
+    <link rel="stylesheet" href="external_styles.css">
+
+    <style>
+        /* This style will apply to the element with the ID "internal-styled" */
+        #internal {
+            color: purple;
+            border: 2px solid purple;
+            background-color: #f3e5f5; /* Very light purple */
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+#internalh1{
+	color: purple;
+}
+    </style>
 </head>
-<body  >
-	
-	<table border="1px" bgcolor = "lightblue">
-	<tr>
-	<th colspan="5">sem</th> 
-	</tr>
-	<tr>
-	<th rowspan="2">Course Code</th>   
-	<th rowspan="2">Course name </th>
+<body>
+    <h1 style="text-align: center; font-style:italic; color:red; ">Demonstrating CSS Styling Methods</h1>
+    <h2 style="color:blue; font-size:30px;">Inline Styling</h2>
 
-	<th colspan="3">Mark</th>
-  </tr>
-  <tr>
-	<td>L</td>   
-	<td >T</td>
-	<td >P</td>
+ <p style="color: blue; border: 2px solid blue; background-color: #e3f2fd; padding: 15px; margin-bottom: 20px;">This text is styled using an *inline style* attribute directly on the div element. This method should generally be avoided for large projects as it doesn't allow for easy reuse.</p>
+    
 
-	
-  </tr>
-  <tr>
-    <th >20MCA101</th>
-	<td >MFC</td>
-	<td >3 </td>
-	<td >1</td>
-	<td >- </td>
+        <h2 id="externalh1">External Styling</h2>
+        <p id="externalp">This text is styled using an *external style sheet* (external_styles.css) linked in the &lt;head&gt; section. This is the *most recommended* method for large-scale projects.</p>
     
-  </tr>
- <tr>
-    <th >20MCA105</th>
-	<td >ADS</td>
-	
-	<td >3 </td>
-	<td >1 </td>
-	<td >- </td>
-    
- </tr>
-  <tr>
-    <th >20MCA105</th>
-	<td >Programing Lab</td>
-	<td >0 </td>
-	<td >1</td>
-	<td >3 </td>
-    
-  </tr>
-  
 
-    
-</table>
-
+        <h2 id="internalh1">Internal Styling</h2>
+        <p id="internal">This text is styled using an *internal style sheet* defined within the &lt;style&gt; tags in the &lt;head&gt; section. This is useful for single-page applications or when a style is unique to one page.</p>
 </body>
-
 </html>
