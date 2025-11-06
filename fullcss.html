@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Methods Example</title>
+    
+    <link rel="stylesheet" href="external_styles.css">
+
+    <style>
+        /* This style will apply to the element with the ID "internal-styled" */
+        #internal {
+            color: purple;
+            border: 2px solid purple;
+            background-color: #f3e5f5; /* Very light purple */
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+#internalh1{
+	color: purple;
+}
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-style:italic; color:red; ">Demonstrating CSS Styling Methods</h1>
+    <h2 style="color:blue; font-size:30px;">Inline Styling</h2>
+
+ <p style="color: blue; border: 2px solid blue; background-color: #e3f2fd; padding: 15px; margin-bottom: 20px;">This text is styled using an *inline style* attribute directly on the div element. This method should generally be avoided for large projects as it doesn't allow for easy reuse.</p>
+    
+
+        <h2 id="externalh1">External Styling</h2>
+        <p id="externalp">This text is styled using an *external style sheet* (external_styles.css) linked in the &lt;head&gt; section. This is the *most recommended* method for large-scale projects.</p>
+    
+
+        <h2 id="internalh1">Internal Styling</h2>
+
+        <p id="internal">This text is styled using an *internal style sheet* defined within the &lt;style&gt; tags in the &lt;head&gt; section. This is useful for single-page applications or when a style is unique to one page.</p>
+
+	<table>
+ <thead>
+ <tr>
+ <th>RegNo</th>
+ <th>Name</th>
+ <th>Marks</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>1234</td>
+ <td>Nia</td>
+ <td>98</td>
+ </tr>
+ <tr>
+ <td>4343</td>
+ <td>Lee</td>
+ <td>95</td>
+ </tr>
+ <tr>
+ <td>3663</td>
+ <td>Zia</td>
+ <td>88</td>
+ </tr>
+ <tr>
+ <td>1122</td>
+ <td>Ria</td>
+ <td>78</td>
+ </tr>
+ </tbody>
+</table>
+</body>
+</html>
