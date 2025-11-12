@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styleform.css">
+  <script>
+    function validateForm() {
+      // Get form elements by ID
+      let name = document.getElementById("fname").value;
+      let password = document.getElementById("password").value;
+	  let phone = document.getElementById("mob").value;
+      let repassword = document.getElementById("password2").value;
+      
+
+      // Name validation
+      if (name === "") {
+        alert("Please enter your name");
+        document.getElementById("fname").focus();
+        return false;
+      }
+	 else if (!isNaN(name))
+	{
+		alert('Name required alphabets!');
+		return false;
+	}
+
+      // Password validation
+      if (password === "") {
+        alert("Please enter your password");
+        document.getElementById("password").focus();
+        return false;
+      } else if (password.length < 8) {
+        alert("Password must be at least 8 characters");
+        document.getElementById("password").focus();
+        return false;
+      }
+	  if (repassword ==="") {
+        alert("Please enter your Repassword");
+        document.getElementById("password2").focus();
+        return false;
+      }
+	  if (repassword != password) {
+        alert("Password doot match");
+        document.getElementById("password2").focus();
+        return false;
+      }
+	  
+	  
+	  	if (phone === "") {
+        alert("please enter  number");
+        document.getElementById("mob").focus();
+        return false;
+		}else if (isNaN(phone))
+		{
+			alert('Phone  required Numbers!');
+			return false;
+		}
+	
+	  if (phone.length !=10) {
+        alert("please enter valid number");
+        document.getElementById("mob").focus();
+        return false;
+      }
+	  else{
+		alert("Registration completed");
+		return true;
+	  }
+
+
+    }
+  </script>
+</head>
+
+<body>
+  <center><h2>Registration Form</h2></center>
+
+  <form id="regForm" onsubmit="return validateForm()">
+    <label>Name</label>
+    <input type="text" id="fname"><br><br>
+
+    <label>Password</label>
+    <input type="password" id="password"><br><br>
+	<label>Re-Enter Password</label>
+    <input type="password" id="password2"><br><br>
+	<label>Mobile number</label>
+	<input type="tel" id="mob" maxlength="10"><br><br>
+
+    <br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Cancel">
+  </form>
+</body>
+</html>
